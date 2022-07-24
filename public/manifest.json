@@ -1,0 +1,25 @@
+{
+    "name": "Magic Clipboard",
+    "version": "0.1",
+    "author": "David Kunz",
+    "manifest_version": 2,
+    "description": "Find card images on pages and add them to a list upon button click.",
+    "icons": {
+        "128": "logo128.png"
+    },
+    "permissions": [],
+    "background": {
+        "scripts": [
+            "background.js"
+        ],
+        "persistent": true
+    },
+    "browser_action": {
+        "default_icon": "logo128.png",
+        "default_popup": "popup.html"
+    },
+    "options_ui": {
+        "page": "index.html",
+        "open_in_tab": false
+    }
+}
