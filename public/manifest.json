@@ -7,13 +7,31 @@
     "icons": {
         "128": "logo128.png"
     },
-    "permissions": [],
+    "permissions": [
+        "activeTab",
+        "tabs"
+    ],
+    "optional_permissions": [
+        "<all_urls>"
+    ],
     "background": {
         "scripts": [
             "background.js"
         ],
         "persistent": true
     },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "content-script.js"
+            ],
+            "run_at": "document_end",
+            "all_frames": false
+        }
+    ],
     "browser_action": {
         "default_icon": "logo128.png",
         "default_popup": "popup.html"
